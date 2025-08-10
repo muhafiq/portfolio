@@ -54,5 +54,20 @@ export const projects = sqliteTable("projects", {
   slug: text("slug").notNull().unique(),
   description: text("description"),
   thumbnail: text("thumbnail").notNull(),
+  tech: text("tech", { mode: "json" }).$type<string[]>(),
+  githubUrl: text("github_url"),
+  demoUrl: text("demo_url"),
   ...timestamps,
 });
+
+export type UsersInsert = typeof users.$inferInsert;
+export type UsersSelect = typeof users.$inferSelect;
+
+export type CategoryInsert = typeof categories.$inferInsert;
+export type CategorySelect = typeof categories.$inferSelect;
+
+export type PostsInsert = typeof posts.$inferInsert;
+export type PostsSelect = typeof posts.$inferSelect;
+
+export type ProjectsInsert = typeof projects.$inferInsert;
+export type ProjectsSelect = typeof projects.$inferSelect;
