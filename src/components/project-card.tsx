@@ -1,6 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 import { ProjectsSelect } from "@/lib/db/schema";
+import Image from "next/image";
 
 export function ProjectList(project: ProjectsSelect) {
   return (
@@ -48,7 +49,7 @@ export function ProjectList(project: ProjectsSelect) {
 export function ProjectCard(project: ProjectsSelect) {
   return (
     <div className="bg-white rounded shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
-      <img
+      <Image
         src={project.thumbnail}
         alt={project.title}
         className="w-full h-48 object-cover"

@@ -19,7 +19,7 @@ export default function PublicHeader() {
     <header className="w-full px-6 md:px-12 py-4 bg-white shadow-sm">
       <div className="flex items-center justify-between">
         <Link className="font-bold select-none text-lg" href="/">
-          Muh. Afiq Ma'mun
+          Muh. Afiq Ma&apos;mun
         </Link>
 
         {/* Toggle button for mobile */}

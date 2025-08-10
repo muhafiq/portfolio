@@ -48,7 +48,7 @@ export default function Blog() {
       <p className="text-center mb-8">
         This page lists all articles that I have written. The topics range from
         programming, backend development, and cloud computing to personal
-        thoughts and learning experiences I've gathered along the way.
+        thoughts and learning experiences I&apos;ve gathered along the way.
       </p>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
         {blogs.map((blog, idx) => (

@@ -118,17 +118,17 @@ export default function Home() {
           />
           <div className="text-center">
             <h1 className="font-bold text-2xl md:text-3xl">
-              Hey, I'm{" "}
+              Hey, I&apos;m{" "}
               <span className="underline underline-offset-4 decoration-gray-500">
-                Muh. Afiq Ma'mun
+                Muh. Afiq Ma&apos;mun
               </span>
             </h1>
             <h2 className="text-lg text-slate-600 mt-1">
               Web | Backend Developer
             </h2>
             <p className="mt-4 text-slate-700 max-w-md">
-              I'm a web and backend developer who enjoys building reliable
-              systems and working behind the scenes. Recently, I've been
+              I&apos;m a web and backend developer who enjoys building reliable
+              systems and working behind the scenes. Recently, I&apos;ve been
               exploring more into DevOps learning tools like Docker and cloud
               infrastructure to better automate and scale projects
             </p>

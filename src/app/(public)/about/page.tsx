@@ -6,9 +6,11 @@ export default function About() {
       </h1>
 
       <p className="text-lg text-gray-600 leading-relaxed mb-8">
-        Hi! I'm{" "}
-        <span className="font-semibold text-gray-800">Muh. Afiq Ma'mun</span>, a
-        passionate{" "}
+        Hi! I&apos;m{" "}
+        <span className="font-semibold text-gray-800">
+          Muh. Afiq Ma&apos;mun
+        </span>
+        , a passionate{" "}
         <span className="text-blue-600 font-medium">JavaScript developer </span>
         who loves building clean, user-friendly, and scalable applications. My
         journey started from experimenting with small web projects, and now I’m
@@ -46,9 +48,9 @@ export default function About() {
           Beyond Code
         </h2>
         <p className="text-gray-600 leading-relaxed">
-          When I'm not coding, I enjoy learning about UI/UX design, reading tech
-          blogs, and occasionally sharing my thoughts on my personal blog. I
-          believe great software starts from understanding the people who use
+          When I&apos;m not coding, I enjoy learning about UI/UX design, reading
+          tech blogs, and occasionally sharing my thoughts on my personal blog.
+          I believe great software starts from understanding the people who use
           it.
         </p>
       </section>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CalendarDays, ExternalLink } from "lucide-react";
 import { PostsSelect } from "@/lib/db/schema";
+import Image from "next/image";
 
 export function BlogList(article: PostsSelect) {
   return (
@@ -38,7 +39,7 @@ export function BlogList(article: PostsSelect) {
 export function BlogCard(article: PostsSelect) {
   return (
     <article className="rounded overflow-hidden shadow hover:shadow-md transition">
-      <img
+      <Image
         src={article.thumbnail}
         alt={article.title}
         className="w-full h-48 object-cover"

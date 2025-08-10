@@ -23,7 +23,7 @@ export default function PublicFooter() {
     <footer className="flex flex-col gap-8 px-12 py-4 items-center justify-between shadow-none [box-shadow:0px_-1px_2px_rgba(0,0,0,0.1)] md:flex-row md:gap-0">
       <div>
         <Link className="font-bold select-none" href="/">
-          Muh. Afiq Ma'mun
+          Muh. Afiq Ma&apos;mun
         </Link>
       </div>
       <ul className="flex items-center gap-6">

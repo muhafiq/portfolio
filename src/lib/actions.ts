@@ -1,28 +1,21 @@
 "use server";
 
-import z from "zod";
-import { db } from "./db";
-import { users } from "./db/schema";
-import { eq } from "drizzle-orm";
-import bcrypt from "bcryptjs";
 import { signIn, signOut } from "@/auth";
 import { AuthError } from "next-auth";
-
-type UserLogin = {
-  email: string;
-  password: string;
-};
 
 type State = {
   message: string;
   success: boolean;
-  errors?: any;
+  errors?: {
+    email?: string[];
+    password?: string[];
+  };
 };
 
 export async function login(_prevState: State | undefined, formData: FormData) {
   try {
-    const email = formData.get("email");
-    const password = formData.get("password");
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
 
     console.log(formData);
 
