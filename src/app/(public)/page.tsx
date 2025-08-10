@@ -1,5 +1,5 @@
-import BlogCard from "@/components/blog-card";
-import ProjectCard from "@/components/project-card";
+import { BlogList } from "@/components/blog-card";
+import { ProjectList } from "@/components/project-card";
 import TechStack from "@/components/tech-stack";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,54 +7,89 @@ import { CircleArrowRight } from "lucide-react";
 import Github from "@/assets/github.svg";
 import Instagram from "@/assets/instagram.svg";
 import LinkedIn from "@/assets/linkedin.svg";
+import crypto from "node:crypto";
 
 export default function Home() {
   const projects = [
     {
+      id: crypto.randomUUID(),
       title: "DevLogger",
+      slug: "devlogger",
       description:
         "A simple RESTful API for logging developer activities built with Express and PostgreSQL.",
+      thumbnail: "https://placehold.co/600x400?text=DevLogger",
       tech: ["Express.js", "PostgreSQL", "JWT"],
       githubUrl: "https://github.com/afiqmamun/devlogger",
       demoUrl: "",
+      createdAt: new Date(),
+      updatedAt: new Date(),
     },
     {
+      id: crypto.randomUUID(),
       title: "GoTodoCLI",
+      slug: "gotodocli",
       description:
         "A CLI app built with Go to manage your to-do list from terminal.",
+      thumbnail: "https://placehold.co/600x400?text=GoTodoCLI",
       tech: ["Go", "Cobra", "SQLite"],
       githubUrl: "https://github.com/afiqmamun/gotodocli",
+      demoUrl: "",
+      createdAt: new Date(),
+      updatedAt: new Date(),
     },
     {
+      id: crypto.randomUUID(),
       title: "MiniURL",
+      slug: "miniurl",
       description:
         "A URL shortener with hit tracking built in TypeScript and deployed on Vercel.",
+      thumbnail: "https://placehold.co/600x400?text=MiniURL",
       tech: ["Next.js", "TypeScript", "Prisma", "PlanetScale"],
       githubUrl: "https://github.com/afiqmamun/miniurl",
       demoUrl: "https://miniurl.vercel.app",
+      createdAt: new Date(),
+      updatedAt: new Date(),
     },
   ];
   const blogs = [
     {
+      id: crypto.randomUUID(),
       title: "Cara Menyusun Struktur REST API yang Rapi di Express",
-      summary:
+      slug: "cara-menyusun-struktur-rest-api-yang-rapi-di-express",
+      excerpt:
         "Dalam tulisan ini, aku bahas cara membuat struktur folder REST API Express yang scalable dan mudah dipelihara...",
-      date: "10 Juli 2025",
-      link: "https://dev.to/afiqmamun/struktur-rest-api-express",
+      content: null,
+      thumbnail: "https://placehold.co/600x400?text=RESTAPI",
+      draft: false,
+      categoryId: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     },
     {
+      id: crypto.randomUUID(),
       title: "Belajar Golang: Kenapa Aku Beralih dari JavaScript?",
-      summary:
+      slug: "belajar-golang-kenapa-aku-beralih-dari-javascript",
+      excerpt:
         "Aku jelaskan pengalaman pribadi kenapa memutuskan belajar Golang setelah bertahun-tahun pakai JavaScript di backend...",
-      date: "24 Juni 2025",
-      link: "https://afiqmamun.medium.com/kenapa-golang",
+      content: null,
+      thumbnail: "https://placehold.co/600x400?text=GOLANG",
+      draft: false,
+      categoryId: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     },
     {
+      id: crypto.randomUUID(),
       title: "CI/CD Sederhana di GitHub Actions untuk Backend",
-      summary:
+      slug: "ci-cd-sederhana-di-github-actions-untuk-backend",
+      excerpt:
         "Langkah demi langkah setup CI/CD sederhana dengan GitHub Actions: test, lint, build, dan deploy otomatis ke server...",
-      date: "8 Mei 2025",
-      link: "https://afiqmamun.hashnode.dev/github-actions-backend",
+      content: null,
+      thumbnail: "https://placehold.co/600x400?text=CI/CD",
+      draft: false,
+      categoryId: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     },
   ];
   const contacts = [
@@ -118,7 +153,7 @@ export default function Home() {
         <div className="flex items-center justify-between gap-4">
           <h2 className="text-2xl font-semibold underline">Projects</h2>
           <Link
-            href="/blog"
+            href="/projects"
             className="bg-slate-600 px-6 py-2 text-white shadow hover:bg-slate-800 duration-300 inline-flex gap-2 items-center"
           >
             <span>Projects</span>
@@ -127,7 +162,7 @@ export default function Home() {
         </div>
         <div>
           {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <ProjectList key={project.title} {...project} />
           ))}
         </div>
       </section>
@@ -145,7 +180,7 @@ export default function Home() {
         </div>
         <div>
           {blogs.map((blog, idx) => (
-            <BlogCard key={idx} {...blog} />
+            <BlogList key={idx} {...blog} />
           ))}
         </div>
       </section>
