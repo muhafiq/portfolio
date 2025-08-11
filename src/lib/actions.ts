@@ -17,12 +17,15 @@ export async function login(_prevState: State | undefined, formData: FormData) {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    console.log(formData);
-
     await signIn("credentials", {
-      ...{ email, password },
-      redirectTo: "/dashboard",
+      email,
+      password,
+      redirect: false,
     });
+    return {
+      message: "Welcome to Dashboard!",
+      success: true,
+    };
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {

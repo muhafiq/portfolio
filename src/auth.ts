@@ -22,7 +22,6 @@ export const authOptions = {
   providers: [
     Credentials({
       async authorize(credentials) {
-        console.log(credentials);
         const parsedCredentials = z
           .object({
             email: z.email(),

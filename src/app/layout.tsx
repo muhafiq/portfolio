@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import "./globals.css";
+import { ToastProvider } from "@/components/toast-context";
 
 const spaceMono = Space_Mono({
   weight: ["400", "700"],
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceMono.className} antialiased`}>{children}</body>
+      <body className={`${spaceMono.className} antialiased`}>
+        <ToastProvider>{children}</ToastProvider>
+      </body>
     </html>
   );
 }
