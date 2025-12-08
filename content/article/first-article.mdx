@@ -1,0 +1,91 @@
+---
+slug: "first-article"
+title: "Getting Started with Next.js and Shadcn"
+date: "2025-12-08"
+description: "lorem ipsum"
+thumbnail: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
+tags: ["nextjs", "shadcn/ui", "mdx"]
+---
+
+Next.js has grown into one of the most influential frameworks in the modern web ecosystem. Paired with **shadcn/ui**, a component library built on top of Radix UI and Tailwind CSS, you get the best combination of developer experience and design flexibility.
+
+Artikel ini bukan sekadar pengantar—ini juga contoh format-format lengkap yang bisa kamu gunakan di blog MDX kamu. Anggap ini sebagai *stress test* untuk semua komponen tampilan.
+
+## What You’ll Learn
+
+- How Next.js works at a high level  
+- Why shadcn/ui is popular  
+- Examples of MDX formatting  
+- Code blocks for various languages  
+- Images, quotes, tables, callouts, and more  
+
+## Introducing Next.js
+
+Next.js menawarkan beberapa fitur kunci yang menjadikannya pilihan utama:
+
+- **SSR (Server-Side Rendering)**: Render halaman di server untuk SEO dan performa.
+- **SSG (Static Site Generation)**: Build halaman statis super cepat.
+- **ISR (Incremental Static Regeneration)**: Update konten tanpa full redeploy.
+- **API Routes**: Bikin endpoint kecil tanpa server terpisah.
+- **App Router**: Struktur modular yang lebih modern.
+
+Kalau boleh sedikit hiperbola: Next.js itu React yang sudah minum vitamin dan ikut gym tiap pagi.
+
+## Why Use shadcn/ui?
+
+shadcn/ui memberikan komponen yang bersih, dapat dikustomisasi penuh, dan tidak terjebak vendor lock-in.
+
+Ciri khasnya:
+- Semua komponen bisa di-*copy* langsung ke project kamu
+- Desain minimalis
+- Extensible dengan Tailwind
+- Radix memberikan behaviour UI yang sudah solid secara accessibility
+
+### Example Image
+
+Gambar bisa di-render langsung di MDX:
+
+![Modern UI Setup](https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg)
+
+Kadang gambar seperti ini membantu mendramatisir apa pun yang sedang kamu jelasin.
+
+---
+
+## Quick Start
+
+### Installation
+
+```bash
+npx create-next-app@latest my-portfolio
+cd my-portfolio
+npm install
+```
+
+### Table
+| Feature                  | Type                   | Description                                            |
+|--------------------------|------------------------|--------------------------------------------------------|
+| Server-Side Rendering    | Rendering Method       | Render halaman di server setiap request               |
+| Static Site Generation   | Rendering Method       | Build halaman statis saat build time                  |
+| Incremental Regeneration | Rendering Method       | Update halaman otomatis setelah build                 |
+| API Routes               | Backend Capability     | Endpoint kecil tanpa server terpisah                  |
+| Middleware               | Edge Capability        | Logic yang berjalan sebelum request mencapai route    |
+
+
+## Table Examples
+
+### Basic Table
+
+| Framework | Bundle Size | Performance |
+|-----------|------------|-------------|
+| Next.js | 45 KB | ⭐⭐⭐⭐⭐ |
+| React | 120 KB | ⭐⭐⭐⭐ |
+| Vue | 85 KB | ⭐⭐⭐⭐ |
+
+### Advanced Table with Alignment
+
+| Feature | Next.js | Gatsby | Remix |
+|:--------|:-------:|:-------|:------|
+| SSR | ✅ | ❌ | ✅ |
+| SSG | ✅ | ✅ | ❌ |
+| ISR | ✅ | ❌ | ❌ |
+| API Routes | ✅ | ❌ | ✅ |
