@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
 
   title: {
-    default: "Muh. Afiq Ma'mun | Full-Stack Developer & Designer",
+    default: "Muh. Afiq Ma'mun | Full-Stack Developer",
     template: "%s | Afiq Ma'mun",
   },
 
