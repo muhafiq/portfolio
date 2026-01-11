@@ -14,9 +14,9 @@ export default function WorkExperiences() {
             <Image
               src={exp.thumbnail}
               alt={exp.company}
-              height={50}
-              width={50}
-              className="w-20 h-20 rounded-lg object-cover"
+              height={512}
+              width={512}
+              className="w-24 h-24 rounded-lg object-cover"
             />
 
             <div className="flex flex-col">
