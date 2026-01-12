@@ -1,20 +1,20 @@
 export const experiences = [
   {
-    company: "TechCorp Indonesia",
-    role: "Backend Engineer",
-    years: "2022 - 2024",
+    company: "Anding Multimedia",
+    role: "Technician Helper",
+    years: "2022",
     description:
-      "Membangun sistem backend, microservices, optimasi query, dan deployment cloud.",
+      "Melakukan instalasi dan konfigurasi sistem wifi rumahan untuk client",
     thumbnail:
-      "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+      "/anding-multimedia.jpeg",
   },
   {
-    company: "Cloudify Labs",
-    role: "Infrastructure & DevOps",
-    years: "2021 - 2022",
+    company: "Addon Finance Indonesia",
+    role: "Fullstack Web Developer",
+    years: "2025 - Now",
     description:
-      "Mengelola infrastruktur berbasis container, CI/CD, serta monitoring pipeline produksi.",
+      "Melakukan pengembangan aplikasi berbasis web menggunakan Next.js dan React.js",
     thumbnail:
-      "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+      "/addon-finance.png",
   },
 ];
